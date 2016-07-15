@@ -2,13 +2,17 @@ import React from 'react';
 import { render } from 'react-dom';
 
 const App = props => (
-  <h1>Hello React (stateless component)</h1>
+  <div>
+    <h1>Hello {props.name} (stateless component)</h1>
+  </div>
 );
 
 // const App = React.createClass({
 //   render () {
 //     return (
-//       <h1>Hello React (via createClass)</h1>
+//       <div>
+//         <h1>Hello {this.props.name} (via createClass)</h1>
+//       </div>
 //     );
 //   }
 // });
@@ -16,9 +20,11 @@ const App = props => (
 // class App extends React.Component {
 //   render () {
 //     return (
-//       <h1>Hello React (via es6 class)</h1>
+//       <div>
+//         <h1>Hello {this.props.name} (via es6 class)</h1>
+//       </div>
 //     );
 //   }
 // }
 
-render(<App />, document.getElementById('root'));
+render(<App name="React" />, document.getElementById('root'));
